@@ -18,7 +18,7 @@ server.on("connection", (clientToProxySocket) => {
         .split(" ")[1]
         .split(":")[0];
     } else {
-      serverAddress = data.toString().split("Host: ")[1].split("\r\n")[0];
+      serverAddress = data.toString().split("host: ")[1].split("\r\n")[0];
     }
     console.log(serverAddress);
 
@@ -63,12 +63,6 @@ server.on("close", () => {
   console.log("Client disconnected");
 });
 
-server.listen(
-  {
-    host: process.env.HOST,
-    port: process.env.PORT,
-  },
-  () => {
-    console.log("Server listening on 0.0.0.0:8080");
-  }
-);
+server.listen({ host: process.env.HOST, port: process.env.PORT | 3005 }, () => {
+  console.log(`${process.env.HOST} ${process.env.PORT}`);
+});
