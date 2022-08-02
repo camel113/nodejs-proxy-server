@@ -2,10 +2,10 @@
   "name": "nodejs-proxy-server",
   "version": "1.0.0",
   "description": "A simple proxy server using net and stream modules",
-  "main": "proxy.js",
+  "main": "express.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node proxy.js"
+    "start": "node express.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/camel113/nodejs-proxy-server/issues"
   },
-  "homepage": "https://github.com/camel113/nodejs-proxy-server#readme"
+  "homepage": "https://github.com/camel113/nodejs-proxy-server#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "install": "^0.13.0",
+    "npm": "^8.15.1",
+    "request": "^2.88.2"
+  }
 }

@@ -63,6 +63,6 @@ server.on("close", () => {
   console.log("Client disconnected");
 });
 
-server.listen({ host: process.env.HOST, port: process.env.PORT | 3005 }, () => {
-  console.log(`${process.env.HOST} ${process.env.PORT}`);
+server.listen({ port: process.env.PORT | 3005 }, () => {
+  console.log(`listen ${process.env.PORT}`);
 });
